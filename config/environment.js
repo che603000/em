@@ -13,7 +13,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
+        Date: false,
+        String: true
       }
     },
 
@@ -39,12 +40,14 @@ module.exports = function(environment) {
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
+
     ENV.APP.rootElement = '#ember-testing';
   }
 
   if (environment === 'production') {
 
   }
+
 
   return ENV;
 };

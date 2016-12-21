@@ -6,8 +6,9 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
   this.route('user');
+  this.route('content')//, {path: 'content/:key'});
 });
 
 export default Router;
