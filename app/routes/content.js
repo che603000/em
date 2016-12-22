@@ -1,13 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    //debugger;
-    const data = this.store.find('content', 1);
-    return data;
-    // return {
-    //   title: "test",
-    //   html:'<code>test</code>'
-    // };
+  // init(){
+  //
+  //   this._super(...arguments)
+  //   const self= this;
+  //   debugger;
+  //   // const data = this.store.find('content', 1);
+  //   // return data;
+  // }
+  actions:{
+    remove: function () {
+      alert('remove')
+    }
   }
 });

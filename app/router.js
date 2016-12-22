@@ -8,7 +8,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('user');
-  this.route('content')//, {path: 'content/:key'});
+  this.route('content', function () {
+    this.route('view', {path: '/:content_id'})
+    //this.route('edit', {path: '/edit/:id'})
+  })
 });
 
 export default Router;
