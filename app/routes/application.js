@@ -10,12 +10,8 @@ export default Ember.Route.extend({
   //   // return data;
   // }
   actions:{
-    cmdRemove () {
-      console.log("content router");
-      return true;
-    },
-    onAction:function () {
-      debugger;
-    }
+   cmdRemove(){
+     console.log("app route");
+   }
   }
 });

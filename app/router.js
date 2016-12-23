@@ -10,7 +10,7 @@ Router.map(function () {
   this.route('user');
   this.route('content', function () {
     this.route('view', {path: '/:content_id'})
-    //this.route('edit', {path: '/edit/:id'})
+    this.route('edit', {path: '/edit/:content_id'})
   })
 });
 
