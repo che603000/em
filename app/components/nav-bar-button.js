@@ -9,6 +9,8 @@ export default Ember.Component.extend({
   actions: {
     onCommand: function (command) {
       this.get("service").sendCommand(command, "test")
+      this.sendAction(command)
+      return true;
     }
   }
 });

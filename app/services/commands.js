@@ -6,5 +6,6 @@ export default Ember.Service.extend(Ember.Evented, {
   // },
   sendCommand(){
     this.trigger(...arguments);
+    this.trigger('command', ...arguments);
   }
 });

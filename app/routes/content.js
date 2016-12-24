@@ -9,13 +9,18 @@ export default Ember.Route.extend({
   //   // const data = this.store.find('content', 1);
   //   // return data;
   // }
-  actions:{
+
+  getModel(){
+    return this.modelFor(this.get('router.currentRouteName'));
+  },
+  actions: {
     cmdRemove () {
       console.log("content router");
       return true;
     },
-    onAction:function () {
-      debugger;
+    cmdEdit(a) {
+      const model = this.getModel();
+      this.transitionTo('content.edit', model.id);
     }
   }
 });
