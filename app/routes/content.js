@@ -28,9 +28,9 @@ export default Ember.Route.extend({
       const model = this.getModel();
       model.save()
         .then(() => this.transitionTo('content.view', model.id))
-        .catch(err => {
-          console.info(err)
-        })
+        // .catch(err => {
+        //   console.info(err)
+        // })
     },
     [COMMAND_CANCEL](a) {
       console.info("route content. command = %s", COMMAND_CANCEL);

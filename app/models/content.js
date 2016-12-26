@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 import ValidatorMixin from 'ember-cli-data-validation/mixins/validator';
 
-export default DS.Model.extend(ValidatorMixin, {
+export default DS.Model.extend( {
   header: DS.attr('string', {
     validation: {
       required: true,
@@ -9,13 +9,11 @@ export default DS.Model.extend(ValidatorMixin, {
     }
   }),
   body: DS.attr('string'),
-  // validate(){
-  //   debugger;
-  //   const r = this._super(...arguments)
-  //   return r;
-  //   //let errors = this.get('errors');
-  //   //return r ? Ember.RSVP.resolve(errors) : Ember.RSVP.reject(errors);
-  // },
+  validate(){
+    const isValid= this._super(...arguments)
+    console.log("model validate = s%", isValid);
+    return isValid;
+  },
   // save: function save() {
   //   var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
   //

@@ -6,12 +6,10 @@ const { computed, defineProperty } = Ember;
 export default BsFormElement.extend({
   setupValidations() {
     //debugger;
-    const model = this.get('model');
-    const err =model.get('errors');//.${this.get('property')}`)
     defineProperty(this, 'errors',computed.readOnly(`model.errors.${this.get('property')}`));
   },
   validationMessages: computed('hasErrors', 'hasWarnings', 'errors.[]', 'warnings.[]', function() {
-    debugger;
+    //debugger;
     if (this.get('hasErrors')) {
       return this.get('errors').map(err=>err.message);
     }

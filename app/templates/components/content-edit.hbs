@@ -5,27 +5,10 @@
     <h3>{{model.header}}</h3>
   </div>
   <div id="page-content">
-    <form>
-      <div class="form-group {{if model.errors.header "has-error"}}">
-        <label class="control-label">Title</label>
-        {{input class="form-control" name="title" value=model.header}}
-        {{#each model.errors.header as |error|}}
-          <small class="help-block ">
-            {{error.message}}
-          </small>
-        {{/each}}
-      </div>
-      <div class="form-group">
-        <label >Body</label>
-        {{input class="form-control" name="title" value=model.body}}
-      </div>
-
-    </form>
 
 
-
-    {{#bs-form formLayout="vertical" model=model action="cmdSave" showValidation=true}}
-      {{bs-form-element controlType="text" label="Title" placeholder="Email" property="header" showValidation=true}}
+    {{#bs-form formLayout="vertical" model=model action="cmdSave" }}
+      {{bs-form-element controlType="text" label="Title" placeholder="Email" property="header"}}
       {{bs-form-element controlType="text" label="Text" placeholder="Password" property="body"}}
 
       {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}

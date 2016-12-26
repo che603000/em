@@ -4,7 +4,7 @@ export default function () {
 
   //this.namespace = 'api';
 
-  this.get('/contents/:id', (db, req) => {
+  this.get('/contents-90/:id', (db, req) => {
 
     return {
       content: {
@@ -15,7 +15,7 @@ export default function () {
     }
   });
 
-  this.get('/contents-90/:id', () => {
+  this.get('/contents/:id', () => {
     return {
       data: {
         type: "content",
@@ -33,7 +33,7 @@ export default function () {
     return {}
   });
 
-  this.put('/contents/:id', (db, req) => {
+  this.patch('/contents/:id', (db, req) => {
     const data = JSON.parse(req.requestBody)
     //console.log(data);
     return new Mirage.Response(422,
@@ -45,7 +45,7 @@ export default function () {
         // }
         errors:[
           {
-          "detail": "Name is not long enough",
+          "detail": "Server validate error",
           "source": {
             "pointer": "data/attributes/header"
           }

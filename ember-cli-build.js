@@ -7,7 +7,7 @@ module.exports = function (defaults) {
     // Add options here
     'ember-bootstrap': {
       importBootstrapJS: false,
-      importBootstrapFont: false,
+      importBootstrapFont: true,
       importBootstrapCSS: false,
       importBootstrapTheme: false
     }
@@ -17,6 +17,8 @@ module.exports = function (defaults) {
   app.import('vendor/themify-icons.min.css');
   app.import('vendor/fonts/themify.ttf', {destDir: 'assets/fonts'});
   app.import('vendor/fonts/themify.woff', {destDir: 'assets/fonts'});
+  app.import('vendor/fonts/themify.woff', {destDir: 'assets/fonts'});
+
   app.import('vendor/pace.min.css');
 
   app.import('vendor/pace.min.js');
