@@ -1,0 +1,123 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ember-bootstrap-validations@0.1.0",
+        "scope": null,
+        "escapedName": "ember-bootstrap-validations",
+        "name": "ember-bootstrap-validations",
+        "rawSpec": "0.1.0",
+        "spec": "0.1.0",
+        "type": "version"
+      },
+      "D:\\projects\\em"
+    ]
+  ],
+  "_from": "ember-bootstrap-validations@0.1.0",
+  "_id": "ember-bootstrap-validations@0.1.0",
+  "_inCache": true,
+  "_location": "/ember-bootstrap-validations",
+  "_nodeVersion": "5.8.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ember-bootstrap-validations-0.1.0.tgz_1459555045957_0.364070349605754"
+  },
+  "_npmUser": {
+    "name": "simonihmig",
+    "email": "ihmig@kaliber5.de"
+  },
+  "_npmVersion": "3.7.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ember-bootstrap-validations@0.1.0",
+    "scope": null,
+    "escapedName": "ember-bootstrap-validations",
+    "name": "ember-bootstrap-validations",
+    "rawSpec": "0.1.0",
+    "spec": "0.1.0",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "http://registry.npmjs.org/ember-bootstrap-validations/-/ember-bootstrap-validations-0.1.0.tgz",
+  "_shasum": "e725eb0f045cca8717109deda3f8194829af17df",
+  "_shrinkwrap": null,
+  "_spec": "ember-bootstrap-validations@0.1.0",
+  "_where": "D:\\projects\\em",
+  "author": {
+    "name": "Simon Ihmig",
+    "email": "ihmig@kaliber5.de"
+  },
+  "bugs": {
+    "url": "https://github.com/kaliber5/ember-bootstrap-validations/issues"
+  },
+  "dependencies": {
+    "ember-cli-babel": "^5.1.6"
+  },
+  "description": "This Ember addon adds support for validations based on ember-validations to ember-bootstrap",
+  "devDependencies": {
+    "broccoli-asset-rev": "^2.4.2",
+    "ember-ajax": "0.7.1",
+    "ember-bootstrap": "0.7.0",
+    "ember-cli": "2.4.3",
+    "ember-cli-app-version": "^1.0.0",
+    "ember-cli-dependency-checker": "^1.2.0",
+    "ember-cli-htmlbars": "^1.0.3",
+    "ember-cli-htmlbars-inline-precompile": "^0.3.1",
+    "ember-cli-inject-live-reload": "^1.4.0",
+    "ember-cli-qunit": "^1.4.0",
+    "ember-cli-release": "0.2.8",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-uglify": "^1.2.0",
+    "ember-data": "^2.4.2",
+    "ember-disable-prototype-extensions": "^1.1.0",
+    "ember-export-application-global": "^1.0.5",
+    "ember-load-initializers": "^0.5.1",
+    "ember-resolver": "^2.0.3",
+    "ember-try": "^0.2.2",
+    "ember-validations": "2.0.0-alpha.4",
+    "loader.js": "^4.0.1"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "dist": {
+    "shasum": "e725eb0f045cca8717109deda3f8194829af17df",
+    "tarball": "https://registry.npmjs.org/ember-bootstrap-validations/-/ember-bootstrap-validations-0.1.0.tgz"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config",
+    "after": "ember-bootstrap"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "gitHead": "9b4610770cb268f4d3bdb2a2801721adec787a5f",
+  "homepage": "https://github.com/kaliber5/ember-bootstrap-validations#readme",
+  "keywords": [
+    "ember-addon"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "simonihmig",
+      "email": "ihmig@kaliber5.de"
+    }
+  ],
+  "name": "ember-bootstrap-validations",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kaliber5/ember-bootstrap-validations.git"
+  },
+  "scripts": {
+    "build": "ember build",
+    "start": "ember server",
+    "test": "ember try:testall"
+  },
+  "version": "0.1.0"
+}
