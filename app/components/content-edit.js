@@ -1,21 +1,19 @@
 import Ember from 'ember';
+import CmdComponent from './bases/component-commands'
+import {COMMAND_REMOVE, COMMAND_CANCEL, COMMAND_SAVE} from '../config'
 
-export default Ember.Component.extend({
-  commands: Ember.inject.service('commands'),
-  onRemove(id){
-    const model = this.get('model');
-    this.sendAction('action', 'remove');
-    // model.destroyRecord().then(()=>{
-    //
-    // }); // => DELETE to /posts/2
+export default CmdComponent.extend({
+  commands(){
+    return [COMMAND_REMOVE, COMMAND_CANCEL, COMMAND_SAVE]
   },
-  init(){
-    this._super(...arguments);
-    this.service = this.get("commands")
-    this.service.on('action', this, this.onRemove);
-  },
-  willDestroyElement(){
-    this.service.off('action', this, this.onRemove)
-    return this._super(...arguments);
+  actions: {
+    cmdSave(model){
+      //debugger;
+      this.triggerAction({
+        action: COMMAND_SAVE,
+        actionContext: [model]
+      });
+    }
   }
+
 });

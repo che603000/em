@@ -2,6 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    //return this.store.findAll('user', 1);
+    return {
+      name: 'name'
+    }
+  },
+  actions:{
+    cmdAction(a,b){
+      debugger;
+      console.log(this, "user route");
+      ///return true;
+    }
   }
 });

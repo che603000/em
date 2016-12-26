@@ -5,9 +5,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
-    // 'ember-cli-bootstrap': {
-    //   'importBootstrapJS': true
-    // }
+    'ember-bootstrap': {
+      importBootstrapJS: false,
+      importBootstrapFont: false,
+      importBootstrapCSS: false,
+      importBootstrapTheme: false
+    }
   });
   app.import('vendor/bootstrap.min.css');
   app.import('vendor/nifty.min.css');
@@ -19,7 +22,6 @@ module.exports = function (defaults) {
   app.import('vendor/pace.min.js');
   app.import('vendor/bootstrap.min.js');
   //app.import('vendor/nifty.min.js');
-
 
 
   // Use `app.import` to add additional libraries to the generated

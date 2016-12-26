@@ -1,5 +1,7 @@
-<div>{{model.id}}</div>
-{{#user-card model=model}}
-{{model.name}}
-{{/user-card}}
+<pre>{{object-to-pre model}}</pre>
+<button {{action "cmdAction"}}>Action</button>
+<br/>
+{{alert-command  }}
 {{outlet}}
+
+<!--action=(action "cmdAction")-->

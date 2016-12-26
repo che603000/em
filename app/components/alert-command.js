@@ -6,9 +6,21 @@ export default Ember.Component.extend({
       name:90000
     };
   },
+  action:{
+    // debugger;
+    // const h =  Ember.Helpers.aaction;
+    // Ember.Helper.action("cmdAction")
+    actionName:"cmdEdit"
+  },
   actions:{
-    onClick:m=> {
-      console.log(m);
+    onClick() {
+      console.log("component ");
+      //this.sendAction(()=>{})
+      this.triggerAction({
+        action: "cmdAction",
+        actionContext: ["a", "b"]
+      });
+      return true;
     }
   }
 });

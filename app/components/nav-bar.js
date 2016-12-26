@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   actions: {
     onCommand: function (command) {
       debugger;
-
+      const state = this.get('state');
       this.sendAction('onCommand')
       return true;
     }

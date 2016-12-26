@@ -1,8 +1,21 @@
+import Mirage, {faker} from 'ember-cli-mirage';
+
 export default function () {
 
   //this.namespace = 'api';
 
-  this.get('/contents/:id', () => {
+  this.get('/contents/:id', (db, req) => {
+
+    return {
+      content: {
+        id: 1,
+        header: 'mirage-title',
+        body: "<code>test</code>"
+      }
+    }
+  });
+
+  this.get('/contents-90/:id', () => {
     return {
       data: {
         type: "content",
@@ -13,17 +26,40 @@ export default function () {
         }
 
       },
-      // authors: [
-      //   {id: 1, name: 'Zelda'},
-      //   {id: 2, name: 'Link'},
-      //   {id: 3, name: 'Epona'},
-      // ]
     };
   });
 
   this.del('/contents/:id', () => {
     return {}
   });
+
+  this.put('/contents/:id', (db, req) => {
+    const data = JSON.parse(req.requestBody)
+    //console.log(data);
+    return new Mirage.Response(422,
+      {
+        //some: 'header'
+      }, {
+        // errors: {
+        //   "title": "Validation error..."
+        // }
+        errors:[
+          {
+          "detail": "Name is not long enough",
+          "source": {
+            "pointer": "data/attributes/header"
+          }
+        }]
+
+
+      });
+    // return new Mirage.Response(422,null, {
+    //   errors:{
+    //     a:1,
+    //     b:3
+    //   }
+    // });
+  })
   // These comments are here to help you get started. Feel free to delete them.
 
   /*

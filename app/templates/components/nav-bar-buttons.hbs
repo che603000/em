@@ -1,5 +1,7 @@
-{{#each buttons as |button| }}
-  {{nav-bar-button command=button.command icon=button.icon title=button.title isVisible=button.isVisible}}
+{{#each state as |options| }}
+  {{nav-bar-button
+    options=options
+  }}
 {{/each}}
 
 

@@ -3,7 +3,7 @@
   <!--NAVBAR-->
   <!--===================================================-->
   <header id="navbar">
-    {{nav-bar}}
+    {{partial "nav-bar-container"}}
   </header>
   <!--===================================================-->
   <!--END NAVBAR-->
@@ -11,17 +11,19 @@
   <div class="boxed">
 
     <!--CONTENT CONTAINER-->
-    {{outlet}}
+    <div id="content-container">
+      {{outlet}}
+    </div>
 
     <!--MAIN NAVIGATION-->
     <!--===================================================-->
-    {{nav-container}}
+    {{partial "nav-container" }}
     <!--===================================================-->
     <!--END MAIN NAVIGATION-->
 
     <!--ASIDE-->
     <!--===================================================-->
-   {{aside-container}}
+    {{partial "aside-container"}}
     <!--===================================================-->
     <!--END ASIDE-->
 
