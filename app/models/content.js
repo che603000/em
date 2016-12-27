@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 import ValidatorMixin from 'ember-cli-data-validation/mixins/validator';
 
-export default DS.Model.extend( {
+export default DS.Model.extend(ValidatorMixin, {
   header: DS.attr('string', {
     validation: {
       required: true,
@@ -10,8 +10,13 @@ export default DS.Model.extend( {
   }),
   body: DS.attr('string'),
   validate(){
-    const isValid= this._super(...arguments)
-    console.log("model validate = s%", isValid);
+    const isValid = this._super(...arguments)
+    console.log({
+      name: "model.content",
+      isError: this.get('isError'),
+      isValid: this.get('isValid'),
+      messageErr: this.get('errors').errorsFor('header'),
+    });
     return isValid;
   },
   // save: function save() {

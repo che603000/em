@@ -1,5 +1,8 @@
 /*jshint node:true*/
 /* global require, module */
+
+
+
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
@@ -18,12 +21,11 @@ module.exports = function (defaults) {
   app.import('vendor/fonts/themify.ttf', {destDir: 'assets/fonts'});
   app.import('vendor/fonts/themify.woff', {destDir: 'assets/fonts'});
   app.import('vendor/fonts/themify.woff', {destDir: 'assets/fonts'});
-
   app.import('vendor/pace.min.css');
 
   app.import('vendor/pace.min.js');
   app.import('vendor/bootstrap.min.js');
-  //app.import('vendor/nifty.min.js');
+  app.import('vendor/nifty.js');
 
 
   // Use `app.import` to add additional libraries to the generated

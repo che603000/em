@@ -8,7 +8,6 @@ export default CmdComponent.extend({
   },
   actions: {
     cmdSave(model){
-      //debugger;
       this.triggerAction({
         action: COMMAND_SAVE,
         actionContext: [model]
