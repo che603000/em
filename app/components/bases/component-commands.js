@@ -7,11 +7,11 @@ export default Ember.Component.extend({
     this._super(...arguments);
     this.state = this.get("state");
   },
-  commands(){
+  get commands(){
     return []
   },
   willRender(){
-    this.get("state").visible(this.commands())
+    this.get("state").visible(this.commands)
   },
   willDestroyElement(){
     this.get("state").visible([])

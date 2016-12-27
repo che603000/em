@@ -9,7 +9,6 @@ export default BsFormElement.extend({
   },
 
   validationMessages: computed('hasErrors', 'hasWarnings', 'errors.[]', 'warnings.[]', function () {
-    //debugger;
     if (this.get('hasErrors')) {
       return this.get('errors').map(err => err.message);
     }

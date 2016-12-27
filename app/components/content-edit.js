@@ -3,7 +3,7 @@ import CmdComponent from './bases/component-commands'
 import {COMMAND_REMOVE, COMMAND_CANCEL, COMMAND_SAVE} from '../config'
 
 export default CmdComponent.extend({
-  commands(){
+  get commands(){
     return [COMMAND_REMOVE, COMMAND_CANCEL, COMMAND_SAVE]
   },
   actions: {
@@ -14,5 +14,4 @@ export default CmdComponent.extend({
       });
     }
   }
-
 });

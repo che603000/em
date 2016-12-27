@@ -12,6 +12,7 @@ Router.map(function () {
     this.route('view', {path: '/:content_id'})
     this.route('edit', {path: '/edit/:content_id'})
   })
+  this.route('upload');
 });
 
 export default Router;

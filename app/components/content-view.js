@@ -3,7 +3,7 @@ import {COMMAND_EDIT} from '../config'
 import CmdComponent from './bases/component-commands'
 
 export default CmdComponent.extend({
-  commands(){
+  get commands(){
     return [COMMAND_EDIT];
   }
 });

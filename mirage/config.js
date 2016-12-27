@@ -4,6 +4,14 @@ export default function () {
 
   //this.namespace = 'api';
 
+  this.passthrough('http://localhost:3000/upload-file', ['post'])
+  //   , (db, req)=>{
+  //   debugger;
+  //   //var data = JSON.parse(req.files);
+  //   return {}
+  //
+  // })
+
   this.get('/contents-90/:id', (db, req) => {
 
     return {
