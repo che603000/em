@@ -1,2 +1,9 @@
-{{drop-zone url='http://localhost:3000/upload-file' clickable=false addRemoveLinks=true}}
-{{yield}}
+{{drop-zone
+  url='http://localhost:3000/upload-file'
+  clickable=false
+  addRemoveLinks=true
+  dictRemoveFile="Удалить файл"
+  success=(action "onSuccess")
+  removedfile =(action "onRemove")
+}}
+

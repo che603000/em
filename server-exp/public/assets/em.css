@@ -1,0 +1,5 @@
+/*nav menu*/
+#mainnav-menu>li.app-item-menu>a.active{
+  color: #fff;
+  font-weight: 600;
+}

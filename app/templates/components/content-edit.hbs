@@ -6,15 +6,19 @@
   </div>
   <div id="page-content">
 
+    {{#bs-tab activeId="tab2"}}
+      {{#bs-tab-pane title="Tab 1" id="tab1"}}
+        {{#bs-form formLayout="vertical" model=model action="cmdSave" }}
+          {{bs-form-element controlType="text" label="Title" placeholder="Email" property="header"}}
+          {{bs-form-element controlType="text" label="Text" placeholder="Password" property="body"}}
 
-    {{#bs-form formLayout="vertical" model=model action="cmdSave" }}
-      {{bs-form-element controlType="text" label="Title" placeholder="Email" property="header"}}
-      {{bs-form-element controlType="text" label="Text" placeholder="Password" property="body"}}
-
-      {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
-    {{/bs-form}}
-
-
+          {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+        {{/bs-form}}
+      {{/bs-tab-pane}}
+      {{#bs-tab-pane title="Tab 2" id="tab2"}}
+        {{upload-file }}
+      {{/bs-tab-pane}}
+    {{/bs-tab}}
   </div>
 
 

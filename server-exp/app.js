@@ -23,15 +23,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
-app.use('/upload-file', upload);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
+const Err404 = (next)=>{
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
+}
+
+// app.use('/', index);
+// app.use('/users', users);
+
+app.use('/upload-file', upload);
+app.use('/api/*', (req, res, next)=> Err404(next))
+app.use('/*', (req, res)=> res.sendFile(path.join(__dirname, 'public', 'index.html')))
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  Err404(next);
 });
 
 // error handler

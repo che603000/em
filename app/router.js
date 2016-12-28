@@ -9,10 +9,12 @@ const Router = Ember.Router.extend({
 Router.map(function () {
   this.route('user');
   this.route('content', function () {
+    this.route('index', {path: '/'})
     this.route('view', {path: '/:content_id'})
     this.route('edit', {path: '/edit/:content_id'})
   })
-  this.route('upload');
+  this.route('upload', {path: '/upload'});
+  this.route('not-found', {path: '/**'});
 });
 
 export default Router;
