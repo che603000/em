@@ -15,6 +15,7 @@ Router.map(function () {
   })
   this.route('upload', {path: '/upload'});
   this.route('not-found', {path: '/**'});
+  this.route('procces');
 });
 
 export default Router;

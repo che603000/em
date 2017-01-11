@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
+const data =require('../dep-data');
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/depProcess', function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*')
-  //res.setHeader('Access-Control-Allow-Headers', 'Cache-Control, X-Requested-With')
-  res.json({status: "OK"});
+  res.json(data.process);
 });
 
 module.exports = router;

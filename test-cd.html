@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+<script>
+  $.ajax({
+  type:     "GET",
+  url:      "https://vs2008-40-11/api/Deposition/DepProcess?$top=10",
+  xhrFields: {
+  withCredentials: true
+  },
+  crossDomain: true,
+  dataType: "json",
+  success: function(data){
+  console.log(data);
+  },
+  error: function(data){
+  console.log(data);
+  }
+  });
+</script>
+</body>
+</html>

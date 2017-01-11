@@ -5,12 +5,7 @@ export default function () {
   //this.namespace = 'api';
 
   this.passthrough('http://localhost:3000/upload-file', ['post'])
-  //   , (db, req)=>{
-  //   debugger;
-  //   //var data = JSON.parse(req.files);
-  //   return {}
-  //
-  // })
+  this.passthrough('https://vs2008-40-11/api/Deposition/DepProcess', ['get'])
 
   this.get('/contents-90/:id', (db, req) => {
 

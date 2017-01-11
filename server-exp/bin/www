@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+require("babel-register");  // использование бабель на сервере  - https://babeljs.io/docs/usage/require/
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
