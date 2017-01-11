@@ -1,9 +1,13 @@
 {{drop-zone
   url='http://localhost:3000/upload-file'
   clickable=false
+  files= files
   addRemoveLinks=true
   dictRemoveFile="Удалить файл"
   success=(action "onSuccess")
   removedfile =(action "onRemove")
+  accept =(action "onAccept")
+  thumbnailHeight=120
+  thumbnailWidth=120
 }}
 
